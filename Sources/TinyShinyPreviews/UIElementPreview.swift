@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct UIElementPreview<Value: View>: View {
+public struct UIElementPreview<Value: View>: View {
 
     private let dynamicTypeSizes: [ContentSizeCategory] = [.extraSmall, .large, .extraExtraExtraLarge]
 
@@ -16,11 +16,11 @@ struct UIElementPreview<Value: View>: View {
 
     private let viewToPreview: Value
 
-    init(_ viewToPreview: Value) {
+    public init(_ viewToPreview: Value) {
         self.viewToPreview = viewToPreview
     }
 
-    var body: some View {
+    public var body: some View {
         Group {
             self.viewToPreview
                 .previewLayout(PreviewLayout.sizeThatFits)

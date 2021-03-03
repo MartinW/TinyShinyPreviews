@@ -7,21 +7,21 @@
 
 import SwiftUI
 
-enum deviceGroup {
+public enum deviceGroup {
     case iPhone12, iPhone11
 }
 
-struct UIDevicePreview<Value: View>: View {
+public struct UIDevicePreview<Value: View>: View {
     
     private let viewToPreview: Value
-    private let deviceStyle: deviceGroup
+    public let deviceStyle: deviceGroup
     
-    init(_ viewToPreview: Value, displayStyle: deviceGroup) {
+    public init(_ viewToPreview: Value, displayStyle: deviceGroup) {
         self.viewToPreview = viewToPreview
         self.deviceStyle = displayStyle
     }
 
-    var body: some View {
+    public var body: some View {
         switch deviceStyle {
         case .iPhone12:
             iPhone12View(viewToPreview: viewToPreview)
