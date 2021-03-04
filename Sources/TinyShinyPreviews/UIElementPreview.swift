@@ -1,9 +1,10 @@
 //
 //  UIElementPreview.swift
-//  FoodComponents
+//  TinyShinyPreviews
 //
-//  Created by Martin Wright on 15/11/2020.
-//  https://www.avanderlee.com/swiftui/previews-different-states/
+//  Created by Martin Wright on 15/11/2020
+
+/** [SwiftLee: SwiftUI Previews: Validating views in different states](https://www.avanderlee.com/swiftui/previews-different-states/) */
 
 import SwiftUI
 

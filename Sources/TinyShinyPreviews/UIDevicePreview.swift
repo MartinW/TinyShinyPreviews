@@ -1,9 +1,12 @@
 //
-//  UIElementPreview.swift
-//  FoodComponents
+//  UIDevicePreview.swift
+//  TinyShinyPreviews
 //
-//  Created by Martin Wright on 15/11/2020.
-//  https://www.avanderlee.com/swiftui/previews-different-states/
+//  Created by Martin Wright on 15/11/2020
+
+/** [SwiftLee: SwiftUI Previews: Validating views in different states](https://www.avanderlee.com/swiftui/previews-different-states/) */
+
+/** [iPhone 12 Size Comparison](https://www.macrumors.com/guide/iphone-12-size-comparison/) */
 
 import SwiftUI
 
@@ -59,7 +62,6 @@ struct iPhone12View<Value: View>: View {
 
 struct iPhone11View<Value: View>: View {
     // devices matching iPhone X and 11 sizes, including SE
-    // https://www.macrumors.com/guide/iphone-12-size-comparison/
     var viewToPreview: Value
     var body: some View {
         Group {
@@ -81,24 +83,6 @@ struct iPhone11View<Value: View>: View {
                 .previewLayout(.device)
                 .previewDevice("iPhone 11 Pro Max")
                 .previewDisplayName("iPhone 11 Pro Max / XS Max / 7 Plus / 8 Plus")
-        }
-    }
-}
-
-struct iPhoneVisionView<Value: View>: View {
-    // overrides for accessibility
-    // https://www.macrumors.com/guide/iphone-12-size-comparison/
-    var viewToPreview: Value
-    var body: some View {
-        Group {
-            viewToPreview
-                .preferredColorScheme(.light)
-                .environment(\.sizeCategory, .medium)
-                .environment(\.legibilityWeight, .bold) // Bold Text
-//                .environment(\.accessibilityInvertColors, .invert)
-                .previewLayout(.device)
-                .previewDevice("iPhone 12")
-                .previewDisplayName("iPhone 12")
         }
     }
 }
