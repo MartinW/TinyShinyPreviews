@@ -10,10 +10,6 @@
 
 import SwiftUI
 
-//public enum device {
-//    case iPhone12, iPhone11
-//}
-
 public enum Device: String {
     case iPhoneSE = "iPhone SE (2nd generation)"
     case iPhone11Pro = "iPhone 11 Pro"
