@@ -41,10 +41,10 @@ struct HelloWorld_Previews: PreviewProvider {
 }
 
 ```
-#### Specific element previews: 
+#### Specific element previews:
 
- - previewSupportedLocales() 
- - previewDarkTheme() 
+ - previewSupportedLocales()
+ - previewDarkTheme()
  - previewRightToLeft()
  - previewContentSize(sizeCategory: ContentSizeCategory)
 
@@ -64,7 +64,7 @@ For iPhone 11 size classes, the devices are:
 | iPhone SE (2nd generation)  | iPhone 7/8/SE 2  |
 | iPhone 11 Pro  | iPhone X/XS/11 Pro |
 | iPhone 11 Pro Max  | iPhone 11 Pro Max / XS Max / 7 Plus / 8 Plus  |
-  
+
 Default device names are used. Device names need to match the names in Xcode in Devices and Simulators.
 
 ### Usage
@@ -91,12 +91,36 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
   static var previews: some View {
     ContentView().previewDevice(device: .iPhone11Pro)
-    ContentView().previewiPhone12Sizes() 
+    ContentView().previewiPhone12Sizes()
   }
 }
 
 ```
 Be sure to use `.previewDevice(device: )` (for TinyShinyPreviews) not `.previewDevice(value: )` (for SwiftUI)
+
+## Preview Size Classes
+
+### Description
+
+Helpers for preview of size classes. Allows previews of layout in multiple size class configurations.
+
+Additional size classes are configured as: `.iPhonePortrait, .iPhoneLandscape, .iPhoneLarge`
+
+| Size Class Config | Horizontal | Vertical |
+|-------|---------|---------|
+| .iPhonePortrait  | compact  | regular  |
+| .iPhoneLandscape  | compact  | compact  |
+| .iPhoneLarge  | regular  | compact  |
+
+
+### Usage
+
+For specific size classes: `ContentView().previewSizeClass(horizontal: .compact, vertical: .compact)`
+
+Using size class configurations: `ContentView().previewSizeClass(sizeClass: .iPhoneLandscape)`
+
+For all suggested size class configurations: `ContentView().previewAllSizeClasses()`
+
 
 
 ## License

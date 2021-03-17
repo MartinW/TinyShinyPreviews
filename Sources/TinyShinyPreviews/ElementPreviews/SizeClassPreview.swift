@@ -4,6 +4,8 @@
 //
 //  Created by Martin Wright on 09/03/2021
 
+/** [Damiano Curia: SwiftUI Preview in Landscape](https://curia.me/swiftui-preview-in-landscape/) */
+
 import SwiftUI
 
 struct SizeClassPreview<Preview: View>: View {
