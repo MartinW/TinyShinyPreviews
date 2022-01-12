@@ -6,7 +6,7 @@ SwiftUI Preview helpers for checking adaptability. Element previews for light an
 
 TinyShinyPreviews is available via Swift Package Manager.
 
-From Xcode, go to File -\> Swift Packages -\> Add Package Dependency and enter [https://github.com/tinyshinyapps/TinyShinyPreviews](https://github.com/tinyshinyapps/TinyShinyPreviews)
+From Xcode, go to File -\> Swift Packages -\> Add Package Dependency and enter [https://github.com/MartinW/TinyShinyPreviews](https://github.com/MartinW/TinyShinyPreviews)
 
 Then
 
